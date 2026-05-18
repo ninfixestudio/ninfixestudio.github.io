@@ -90,8 +90,13 @@ typeText();
 // Ini buat custom cursor
 const cursor = document.querySelector('.custom-cursor');
 
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
+const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
-    cursor.style.top = e.clientY + 'px';
-})
+if (!isTouchDevice) {
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+} else {
+    cursor.style.display = 'none';
+}
