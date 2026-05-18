@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ninfixe Studio</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a class="logo" href="#home">NINFIXE STUDIO</a>
+
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO SECTION -->
+         <section id="home" class="hero">
+            <div class="overlay"></div>
+
+            <div class="hero-content">
+                <img src="assets/images/profiles.png" class="profile-img">
+
+                <h1>NINFIXE STUDIO</h1>
+
+                <p id="typing-text"></p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">VIEW PROJECT</a>
+
+                    <a href="#contact" class="btn btn-secondary">CONTACT</a>
+                </div>
+            </div>
+         </section>
+         <section id="about" class="about reveal">
+            <div class="about-container">
+                <h2>About Me</h2>
+
+                <p>
+                    Hello everyone, just call me Haru, I'm from Indonesia, I'm a beginner game developer who just started making games. I like making horror games but not just horror, but I want to provide a good story for my game, because I want players to be able to enjoy the game I made emotionally. Therefore, I ask for your support, friends.
+                </p>
+
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>2025</h3>
+                        <p>STARTED JOURNEY</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3>3</h3>
+                        <p>ACTIVE PROJECTS</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3>UNITY</h3>
+                        <p>GAME ENGINE</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section id="skills" class="skills reveal">
+            <h2>MY SKILLS</h2>
+            <div class="skill-container">
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <p>Unity</p>
+                        <p>75%</p>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-progress unity"></div>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <p>Blender</p>
+                        <p>35%</p>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-progress blender"></div>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <p>Pixel Art</p>
+                        <p>5%</p>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-progress pixelart"></div>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section id="projects" class="projects reveal">
+            <h2>PROJECT</h2>
+
+            <div class="project-tabs">
+                <button class="active" data-filter="release">Release</button>
+                <button data-filter="development">Development</button>
+                <button data-filter="modeling">3D Modeling</button>
+                <button data-filter="pixelart">Pixel Art</button>
+            </div>
+
+            <div class="projects-container">
+                <!-- PROJECT CARD -->
+                 <div class="project-card" data-category="release">
+                    <img src="assets/images/game01.png">
+
+                    <div class="project-content">
+                        <h3>Program.exe</h3>
+
+                        <p>
+                            Rifan, a print and photocopy shop keeper, one day had a strange, mysterious customer come in. He said strange things, but was immediately distracted by the commotion in the warehouse.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Unity</span>
+                            <span>Horror</span>
+                            <span>PSX</span>
+                        </div>
+
+                        <a href="https://ninfixestudio.itch.io/programexe">View Project</a>
+                    </div>
+                 </div>
+                 <!-- PROJECT CARD 
+                 <div class="project-card upcoming-card" data-category="release">
+                    <div class="upcoming-content">
+                        <h3>UPCOMING</h3>
+
+                        <p>
+                            New horror project coming soon...
+                        </p>
+                    </div>
+                 </div>-->
+                 <div class="project-card upcoming-card" data-category="development">
+                    <div class="upcoming-content">
+                        <h3>UPCOMING</h3>
+
+                        <p>
+                            New horror project coming soon...
+                        </p>
+                    </div>
+                 </div>
+                 <div class="project-card upcoming-card" data-category="modeling">
+                    <div class="upcoming-content">
+                        <h3>UPCOMING</h3>
+
+                        <p>
+                            New project coming soon...
+                        </p>
+                    </div>
+                 </div>
+                 <div class="project-card upcoming-card" data-category="pixelart">
+                    <div class="upcoming-content">
+                        <h3>UPCOMING</h3>
+
+                        <p>
+                            New project coming soon...
+                        </p>
+                    </div>
+                 </div>
+            </div>
+         </section>
+         <section id="contact" class="contact reveal">
+            <h2>CONTACT ME</h2>
+
+            <p class="contact-desc">
+                Interested in collaboration, projects, or horror game development?
+            </p>
+
+            <div class="contact-container">
+                <a href="#">Instagram</a>
+                <a href="#">Youtube</a>
+                <a href="#">Itch.io</a>
+                <a href="#">Email</a>
+            </div>
+         </section>
+
+         <footer class="footer">
+            <p>© 2026 Ninfixe Studio. All Rights Reserved.</p>
+         </footer>
+         
+         <!-- CURSOR -->
+         <div class="custom-cursor"></div>
+         <script src="script.js"></script>
+    </body>
+</html>
