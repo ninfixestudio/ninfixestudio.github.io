@@ -1,756 +1,244 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>One-project all about Wawan</title>
-  <meta property="og:title" content="One-project all about Wawan" />
-  <meta property="og:description" content="Game Developer & Digital Artist. Bringing concepts to life through 3D art, illustration, and precision pixel art." />
-  <meta property="og:image" content="https://uimg.ngfiles.com/profile/28701/28701254.webp?f1776990534" />
-  <meta property="og:type" content="website" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Creepster&family=Special+Elite&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --blood: #8b0000;
-      --blood-bright: #cc0000;
-      --dim: #1a0a0a;
-      --darker: #0d0505;
-      --fog: #2a1515;
-      --green-crt: #00ff41;
-      --amber: #ffb000;
-      --white-noise: #c8c8c8;
-      --scan: rgba(0,0,0,0.08);
-    }
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ninfixe Studio</title>
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+        <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    html { scroll-behavior: smooth; }
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    body {
-      background: var(--darker);
-      color: var(--white-noise);
-      font-family: 'Share Tech Mono', monospace;
-      overflow-x: hidden;
-      cursor: crosshair;
-    }
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    /* ── SCANLINE OVERLAY ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background: repeating-linear-gradient(
-        0deg,
-        var(--scan) 0px,
-        var(--scan) 1px,
-        transparent 1px,
-        transparent 3px
-      );
-      pointer-events: none;
-      z-index: 9999;
-    }
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a class="logo" href="#home">NINFIXE STUDIO</a>
 
-    /* ── NOISE TEXTURE ── */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 9998;
-      opacity: 0.5;
-    }
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
 
-    /* ── GLITCH KEYFRAMES ── */
-    @keyframes glitch1 {
-      0%,100% { clip-path: inset(0 0 95% 0); transform: translate(-3px,0); }
-      20%      { clip-path: inset(30% 0 60% 0); transform: translate(3px,0); }
-      40%      { clip-path: inset(70% 0 10% 0); transform: translate(-2px,0); }
-      60%      { clip-path: inset(10% 0 80% 0); transform: translate(2px,0); }
-      80%      { clip-path: inset(50% 0 40% 0); transform: translate(-3px,0); }
-    }
-    @keyframes glitch2 {
-      0%,100% { clip-path: inset(80% 0 5% 0); transform: translate(3px,0); }
-      20%      { clip-path: inset(10% 0 70% 0); transform: translate(-3px,0); }
-      40%      { clip-path: inset(50% 0 30% 0); transform: translate(2px,0); }
-      60%      { clip-path: inset(20% 0 65% 0); transform: translate(-2px,0); }
-      80%      { clip-path: inset(5% 0 85% 0); transform: translate(3px,0); }
-    }
-    @keyframes flicker {
-      0%,100% { opacity: 1; }
-      92%      { opacity: 1; }
-      93%      { opacity: 0.4; }
-      94%      { opacity: 1; }
-      96%      { opacity: 0.6; }
-      97%      { opacity: 1; }
-    }
-    @keyframes scanMove {
-      0%   { top: -100%; }
-      100% { top: 100%; }
-    }
-    @keyframes pulse-blood {
-      0%,100% { box-shadow: 0 0 8px var(--blood), 0 0 20px var(--blood); }
-      50%      { box-shadow: 0 0 20px var(--blood-bright), 0 0 50px var(--blood-bright); }
-    }
-    @keyframes blink {
-      0%,100% { opacity: 1; }
-      50%      { opacity: 0; }
-    }
-    @keyframes float-up {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes static-roll {
-      0%   { background-position: 0 0; }
-      100% { background-position: 0 100px; }
-    }
-    @keyframes shake {
-      0%,100% { transform: translateX(0); }
-      25%      { transform: translateX(-2px) rotate(-0.5deg); }
-      75%      { transform: translateX(2px) rotate(0.5deg); }
-    }
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
 
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      background:
-        radial-gradient(ellipse 60% 40% at 50% 60%, rgba(139,0,0,0.18) 0%, transparent 70%),
-        var(--darker);
-      text-align: center;
-      padding: 2rem;
-      animation: flicker 8s infinite;
-    }
+        <!-- HERO SECTION -->
+         <section id="home" class="hero">
+            <div class="overlay"></div>
 
-    /* moving scan line */
-    #hero .scan-line {
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, transparent, rgba(0,255,65,0.06), transparent);
-      animation: scanMove 6s linear infinite;
-      pointer-events: none;
-    }
+            <div class="hero-content">
+                <img src="assets/images/profiles.png" class="profile-img">
 
-    .hero-profile {
-      width: 150px;
-      height: 150px;
-      margin: 4rem auto 2rem;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid var(--blood-bright);
-      box-shadow: 0 0 20px var(--blood-bright), inset 0 0 20px rgba(139,0,0,0.3);
-      animation: pulse-blood 3s infinite;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--fog);
-    }
-    .hero-profile img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+                <h1>NINFIXE STUDIO</h1>
 
-    .hero-tag {
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
-      color: var(--blood-bright);
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-    }
-    .hero-tag span { animation: blink 1.2s step-end infinite; }
+                <p id="typing-text"></p>
 
-    .hero-name {
-      font-family: 'Creepster', cursive;
-      font-size: clamp(3rem, 10vw, 7rem);
-      line-height: 1;
-      color: var(--white-noise);
-      position: relative;
-      letter-spacing: 0.05em;
-    }
-    .hero-name::before, .hero-name::after {
-      content: attr(data-text);
-      position: absolute;
-      inset: 0;
-      font-family: inherit;
-      font-size: inherit;
-    }
-    .hero-name::before {
-      color: var(--blood-bright);
-      animation: glitch1 4s infinite;
-    }
-    .hero-name::after {
-      color: var(--green-crt);
-      animation: glitch2 4s infinite 0.2s;
-    }
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">VIEW PROJECT</a>
 
-    .hero-sub {
-      font-family: 'Special Elite', serif;
-      font-size: clamp(0.9rem, 2.5vw, 1.3rem);
-      color: var(--amber);
-      margin-top: 1.2rem;
-      letter-spacing: 0.12em;
-    }
+                    <a href="#contact" class="btn btn-secondary">CONTACT</a>
+                </div>
+            </div>
+         </section>
+         <section id="about" class="about reveal">
+            <div class="about-container">
+                <h2>About Me</h2>
 
-    .hero-desc {
-      max-width: 520px;
-      margin: 1.5rem auto 0;
-      font-size: 0.82rem;
-      line-height: 1.8;
-      color: rgba(200,200,200,0.65);
-    }
+                <p>
+                    Hello everyone, just call me Haru, I'm from Indonesia, I'm a beginner game developer who just started making games. I like making horror games but not just horror, but I want to provide a good story for my game, because I want players to be able to enjoy the game I made emotionally. Therefore, I ask for your support, friends.
+                </p>
 
-    .cta-row {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 2.5rem;
-    }
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>2025</h3>
+                        <p>STARTED JOURNEY</p>
+                    </div>
 
-    .btn {
-      padding: 0.7rem 1.8rem;
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid;
-      cursor: crosshair;
-      transition: all 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-primary {
-      background: var(--blood);
-      border-color: var(--blood-bright);
-      color: #fff;
-      animation: pulse-blood 3s infinite;
-    }
-    .btn-primary:hover {
-      background: var(--blood-bright);
-      animation: shake 0.2s infinite;
-    }
-    .btn-outline {
-      background: transparent;
-      border-color: var(--green-crt);
-      color: var(--green-crt);
-    }
-    .btn-outline:hover {
-      background: rgba(0,255,65,0.08);
-      box-shadow: 0 0 15px var(--green-crt);
-    }
+                    <div class="stat-box">
+                        <h3>3</h3>
+                        <p>ACTIVE PROJECTS</p>
+                    </div>
 
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(180deg, rgba(13,5,5,0.95) 0%, transparent 100%);
-      backdrop-filter: blur(4px);
-      border-bottom: 1px solid rgba(139,0,0,0.3);
-    }
-    .nav-logo {
-      font-family: 'Creepster', cursive;
-      font-size: 1.4rem;
-      color: var(--blood-bright);
-      text-decoration: none;
-      letter-spacing: 0.1em;
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--white-noise);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--blood-bright); }
+                    <div class="stat-box">
+                        <h3>UNITY</h3>
+                        <p>GAME ENGINE</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section id="skills" class="skills reveal">
+            <h2>MY SKILLS</h2>
+            <div class="skill-container">
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <p>Unity</p>
+                        <p>75%</p>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-progress unity"></div>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <p>Blender</p>
+                        <p>35%</p>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-progress blender"></div>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <p>Pixel Art</p>
+                        <p>5%</p>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-progress pixelart"></div>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section id="projects" class="projects reveal">
+            <h2>PROJECT</h2>
 
-    /* ── SECTION BASE ── */
-    section {
-      padding: 6rem 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+            <div class="project-tabs">
+                <button class="active" data-filter="release">Release</button>
+                <button data-filter="development">Development</button>
+                <button data-filter="modeling">3D Modeling</button>
+                <button data-filter="pixelart">Pixel Art</button>
+            </div>
 
-    .section-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.35em;
-      color: var(--blood-bright);
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-    .section-title {
-      font-family: 'Creepster', cursive;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1.1;
-      margin-bottom: 3rem;
-      position: relative;
-    }
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 2px;
-      background: var(--blood-bright);
-      margin-top: 0.8rem;
-      box-shadow: 0 0 10px var(--blood-bright);
-    }
+            <div class="projects-container">
+                <!-- PROJECT CARD -->
+                 <div class="project-card" data-category="release">
+                    <img src="assets/images/game01.png">
 
-    /* ── ABOUT ── */
-    #about {
-      border-top: 1px solid rgba(139,0,0,0.2);
-    }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-    @media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+                    <div class="project-content">
+                        <h3>Program.exe</h3>
 
-    .about-text p {
-      font-size: 0.88rem;
-      line-height: 1.9;
-      color: rgba(200,200,200,0.8);
-      margin-bottom: 1rem;
-    }
+                        <p>
+                            Rifan, a print and photocopy shop keeper.
+                        </p>
 
-    .skill-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-    .skill-item {}
-    .skill-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      margin-bottom: 0.4rem;
-      color: var(--amber);
-    }
-    .skill-bar {
-      height: 4px;
-      background: rgba(139,0,0,0.2);
-      position: relative;
-      border: 1px solid rgba(139,0,0,0.4);
-    }
-    .skill-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--blood), var(--blood-bright));
-      box-shadow: 0 0 8px var(--blood-bright);
-      transition: width 1.5s cubic-bezier(0.16,1,0.3,1);
-    }
+                        <div class="project-tags">
+                            <span>Unity</span>
+                            <span>Horror</span>
+                            <span>PSX</span>
+                        </div>
 
-    /* ── WORKS ── */
-    #works { border-top: 1px solid rgba(139,0,0,0.2); }
+                        <a href="https://ninfixestudio.itch.io/programexe" class="btn-view">View Project</a>
+                    </div>
+                 </div>
+                 <div class="project-card" data-category="development">
+                    <img src="assets/images/game02.jpeg">
 
-    .works-filter {
-      display: flex;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-      margin-bottom: 2.5rem;
-    }
-    .filter-btn {
-      padding: 0.35rem 1rem;
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      border: 1px solid rgba(139,0,0,0.4);
-      background: transparent;
-      color: rgba(200,200,200,0.6);
-      cursor: crosshair;
-      transition: all 0.2s;
-    }
-    .filter-btn.active, .filter-btn:hover {
-      border-color: var(--blood-bright);
-      color: var(--blood-bright);
-      background: rgba(139,0,0,0.1);
-    }
+                    <div class="project-content">
+                        <h3>Beyond The Paper (STC)</h3>
 
-    .works-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
+                        <p>
+                            A full story of the part game Program.exe.
+                        </p>
 
-    .work-card {
-      border: 1px solid rgba(139,0,0,0.3);
-      background: var(--fog);
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s;
-      animation: float-up 0.6s ease both;
-    }
-    .work-card:hover {
-      border-color: var(--blood-bright);
-      box-shadow: 0 0 20px rgba(139,0,0,0.3);
-      transform: translateY(-3px);
-    }
-    .work-thumb {
-      width: 100%;
-      aspect-ratio: 16/10;
-      position: relative;
-      overflow: hidden;
-    }
-    /* PSX-style pixel art placeholder thumbs */
-    .work-thumb canvas { width: 100%; height: 100%; image-rendering: pixelated; }
+                        <div class="project-tags">
+                            <span>Unity</span>
+                            <span>Horror</span>
+                            <span>PSX</span>
+                        </div>
 
-    .work-info {
-      padding: 1.2rem;
-    }
-    .work-tag {
-      font-size: 0.6rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--blood-bright);
-      margin-bottom: 0.4rem;
-    }
-    .work-title {
-      font-family: 'Special Elite', serif;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    .work-desc {
-      font-size: 0.75rem;
-      color: rgba(200,200,200,0.55);
-      line-height: 1.7;
-    }
-    .work-coming-soon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      color: rgba(200,200,200,0.8);
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.25em;
-      padding: 1rem;
-      text-align: center;
-    }
+                        <a class="btn-upcoming">Coming Soon</a>
+                    </div>
+                 </div>
+                 <div class="project-card" data-category="development">
+                    <img src="assets/images/game03.jpg">
 
-    /* ── CONTACT ── */
-    #contact {
-      border-top: 1px solid rgba(139,0,0,0.2);
-      text-align: center;
-    }
-    #contact p {
-      font-size: 0.88rem;
-      color: rgba(200,200,200,0.6);
-      line-height: 1.9;
-      max-width: 480px;
-      margin: 0 auto 2.5rem;
-    }
+                    <div class="project-content">
+                        <h3>Jalan Pintas (STC)</h3>
 
-    .contact-links {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-    .contact-link {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--green-crt);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(0,255,65,0.3);
-      padding-bottom: 2px;
-      transition: all 0.2s;
-    }
-    .contact-link:hover {
-      color: #fff;
-      border-color: #fff;
-      text-shadow: 0 0 10px var(--green-crt);
-    }
+                        <p>
+                            Topan, a driver taxi. This game is a anomaly games.
+                        </p>
 
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid rgba(139,0,0,0.15);
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      color: rgba(200,200,200,0.25);
-    }
-    footer span { color: var(--blood-bright); }
+                        <div class="project-tags">
+                            <span>Unity</span>
+                            <span>Horror</span>
+                            <span>PSX</span>
+                        </div>
 
-    /* ── CURSOR FX ── */
-    .cursor-dot {
-      width: 6px; height: 6px;
-      background: var(--blood-bright);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 10000;
-      transform: translate(-50%, -50%);
-      box-shadow: 0 0 8px var(--blood-bright);
-      transition: width 0.1s, height 0.1s;
-    }
+                        <a class="btn-upcoming">Coming Soon</a>
+                    </div>
+                 </div>
+                 <!-- PROJECT CARD 
+                 <div class="project-card upcoming-card" data-category="release">
+                    <div class="upcoming-content">
+                        <h3>UPCOMING</h3>
 
-    /* ── CRT corner vignette ── */
-    .vignette {
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.8) 100%);
-      pointer-events: none;
-      z-index: 9997;
-    }
-  </style>
-</head>
-<body>
+                        <p>
+                            New horror project coming soon...
+                        </p>
+                    </div>
+                 </div>-->
+                 <div class="project-card upcoming-card" data-category="development">
+                    <div class="upcoming-content">
+                        <h3>UPCOMING</h3>
 
-<div class="vignette"></div>
-<div class="cursor-dot" id="cursorDot"></div>
+                        <p>
+                            New horror project coming soon...
+                        </p>
+                    </div>
+                 </div>
+                 <div class="project-card upcoming-card" data-category="modeling">
+                    <div class="upcoming-content">
+                        <h3>UPCOMING</h3>
 
-<!-- NAV -->
-<nav>
-  <a class="nav-logo" href="#">one-project</a>
-  <ul class="nav-links">
-    <li><a href="#about">Tentang</a></li>
-    <li><a href="#works">Karya</a></li>
-    <li><a href="#contact">Kontak</a></li>
-  </ul>
-</nav>
+                        <p>
+                            New project coming soon...
+                        </p>
+                    </div>
+                 </div>
+                 <div class="project-card upcoming-card" data-category="pixelart">
+                    <div class="upcoming-content">
+                        <h3>UPCOMING</h3>
 
-<!-- HERO -->
-<div id="hero">
-  <div class="scan-line"></div>
-  <div class="hero-profile">
-    <img src="https://uimg.ngfiles.com/profile/28701/28701254.webp?f1776990534" alt="Profile" />
-  </div>
-  <p class="hero-tag">&gt; LOADING PORTFOLIO.EXE<span>_</span></p>
-  <h1 class="hero-name" data-text="Wawan Maulana Endang">wawan maulana endang</h1>
-  <p class="hero-sub">Game Developer . 3D Art & Modeling . 2D Illustration</p>
-  <p class="hero-desc">
-    Game Developer & Digital Artist. Bringing concepts to life through 3D art, illustration, and precision pixel art.
-  </p>
-  <div class="cta-row">
-    <a href="#works" class="btn btn-primary">▶ Lihat Karya</a>
-    <a href="#contact" class="btn btn-outline">📡 Hubungi</a>
-  </div>
-</div>
+                        <p>
+                            New project coming soon...
+                        </p>
+                    </div>
+                 </div>
+            </div>
+         </section>
+         <section id="contact" class="contact reveal">
+            <h2>CONTACT ME</h2>
 
-<!-- ABOUT -->
-<section id="about">
-  <p class="section-label">// about.exe</p>
-  <h2 class="section-title">Tentang Saya</h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>
-        Welcome. I am a game developer and digital artist focused on creating unique visual experiences.
-        From the logic of programming to the beauty of the digital canvas, I blend technology and art to build immersive worlds.
-      </p>
-      <p>
-        My expertise spans game development, 3D art, portrait painting, and precision pixel art.
-        I am dedicated to creating works that leave a lasting impression through every detail I shape.
-      </p>
-    </div>
-    <div class="skill-list">
-      <div class="skill-item">
-        <div class="skill-label"><span>GAME DEVELOPMENT</span><span>90%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-label"><span>3D MODELING & SCULPT</span><span>50%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-label"><span>PORTRAIT PAINTING</span><span>25%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:25%"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-label"><span>PIXEL ART</span><span>32%</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:32%"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
+            <p class="contact-desc">
+                Interested in collaboration, projects, or horror game development?
+            </p>
 
-<!-- WORKS -->
-<section id="works">
-  <p class="section-label">// works.dat</p>
-  <h2 class="section-title">Karya Pilihan</h2>
-  <div class="works-filter">
-    <button class="filter-btn active" onclick="filterWorks('game',this)">PSX Horror Game</button>
-    <button class="filter-btn" onclick="filterWorks('3d',this)">3D Art</button>
-    <button class="filter-btn" onclick="filterWorks('portrait',this)">Portrait</button>
-    <button class="filter-btn" onclick="filterWorks('pixel',this)">Pixel Art</button>
-  </div>
-  <div class="works-grid" id="worksGrid"></div>
-</section>
+            <div class="contact-container">
+                <a href="#">Instagram</a>
+                <a href="#">Youtube</a>
+                <a href="#">Itch.io</a>
+                <a href="#">Email</a>
+            </div>
+         </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <p class="section-label">// contact.ini</p>
-  <h2 class="section-title" style="text-align:center">Hubungi Saya</h2>
-  <p>
-    Tertarik berkolaborasi, komisioning karya, atau sekadar ngobrol?
-    Jangan ragu untuk menghubungi saya melalui platform di bawah ini.
-  </p>
-  <div class="contact-links">
-    <a href="mailto:oneproject079@gmail.com" class="contact-link" target="_blank" rel="noopener">✉ EMAIL</a>
-    <a href="https://one-project.itch.io/" class="contact-link" target="_blank" rel="noopener">🎮 ITCH.IO</a>
-    <a href="https://www.instagram.com/zxone_079/" class="contact-link" target="_blank" rel="noopener">🖼 INSTAGRAM</a>
-    <a href="https://x.com/oneproject07" class="contact-link" target="_blank" rel="noopener">🐦 TWITTER/X</a>
-    <a href="https://www.youtube.com/@one_project.079" class="contact-link" target="_blank" rel="noopener">▶ YOUTUBE</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 <span>one-project</span> — Dibuat dengan darah dan piksel &nbsp;|&nbsp; Hosted on <span>GitHub Pages</span></p>
-</footer>
-
-<script>
-  // ── CURSOR ──
-  const dot = document.getElementById('cursorDot');
-  document.addEventListener('mousemove', e => {
-    dot.style.left = e.clientX + 'px';
-    dot.style.top  = e.clientY + 'px';
-  });
-
-  // ── WORKS DATA ──
-  const works = [
-    { cat: 'game', title: 'EGG RICE WITH SOY SAUCE', desc: 'someone who came home from working overtime and felt hungry finally cooked rice with egg and sweet soy sauce, but something happened.', color: ['#1a0a0a','#8b0000','#2a1515'], image: 'https://img.itch.zone/aW1nLzI2ODM2NjM4LmpwZw==/315x250%23c/xq0xgK.jpg', href: 'https://one-project.itch.io/egg-rice-with-soy-sauce' },
-    { cat: 'game', title: 'NYUSRUK', desc: 'A driver crashes deep in a forest. The car is wrecked. As you try to escape on foot, something mysterious begins to happen.', color: ['#0a0a1a','#4400aa','#1a1540'], image: 'https://img.itch.zone/aW1nLzI1NDI1NTU0LnBuZw==/315x250%23c/S5rPc1.png', href: 'https://one-project.itch.io/nyusruk' },
-    { cat: '3d',       placeholder: true, color: ['#0f0f0f','#334433','#1a2a1a'] },
-    { cat: 'portrait', placeholder: true, color: ['#1a1010','#aa4400','#2a1a10'] },
-    { cat: 'pixel',    placeholder: true, color: ['#0a0a12','#003355','#0a0f1a'] },
-  ];
-
-  function genThumb(colors) {
-    const c = document.createElement('canvas');
-    c.width = 160; c.height = 100;
-    const ctx = c.getContext('2d');
-    const [bg, acc, mid] = colors;
-    ctx.fillStyle = bg; ctx.fillRect(0,0,160,100);
-    // simple pixel noise art
-    for(let i=0;i<600;i++){
-      const x=Math.random()*160|0, y=Math.random()*100|0;
-      const s=Math.random()*3+1|0;
-      ctx.fillStyle = [bg,acc,mid][Math.random()*3|0];
-      ctx.globalAlpha = Math.random()*0.7+0.3;
-      ctx.fillRect(x,y,s,s);
-    }
-    // fake horizon
-    ctx.globalAlpha = 0.6;
-    ctx.fillStyle = acc;
-    ctx.fillRect(0, 60+Math.random()*10|0, 160, 2);
-    ctx.globalAlpha = 0.2;
-    ctx.fillStyle = acc;
-    ctx.fillRect(0, 70, 160, 30);
-    ctx.globalAlpha = 1;
-    return c;
-  }
-
-  function renderWorks(filter) {
-    const grid = document.getElementById('worksGrid');
-    grid.innerHTML = '';
-    works
-      .filter(w => filter === 'all' || w.cat === filter)
-      .forEach((w, i) => {
-        const card = document.createElement('div');
-        card.className = 'work-card';
-        card.style.animationDelay = (i * 0.08) + 's';
-
-        const thumb = document.createElement('div');
-        thumb.className = 'work-thumb';
-        if (w.placeholder) {
-          const placeholder = document.createElement('div');
-          placeholder.className = 'work-coming-soon';
-          placeholder.textContent = 'coming soon';
-          thumb.appendChild(placeholder);
-        } else if (w.image) {
-          const img = document.createElement('img');
-          img.src = w.image;
-          img.alt = w.title;
-          img.style.width = '100%';
-          img.style.height = '100%';
-          img.style.objectFit = 'cover';
-          img.style.display = 'block';
-          thumb.appendChild(img);
-        } else if (w.embed) {
-          const iframe = document.createElement('iframe');
-          iframe.setAttribute('frameborder', '0');
-          iframe.src = w.embed;
-          iframe.style.width = '100%';
-          iframe.style.height = '100%';
-          iframe.style.border = '0';
-          iframe.style.display = 'block';
-          thumb.appendChild(iframe);
-        } else {
-          thumb.appendChild(genThumb(w.color));
-        }
-
-        card.appendChild(thumb);
-        if (!w.placeholder) {
-          const info = document.createElement('div');
-          info.className = 'work-info';
-          info.innerHTML = `
-            <p class="work-tag">${w.cat.toUpperCase()}</p>
-            <h3 class="work-title">${w.title}</h3>
-            <p class="work-desc">${w.desc}</p>
-          `;
-          card.appendChild(info);
-        }
-
-        if (w.href) {
-          const link = document.createElement('a');
-          link.href = w.href;
-          link.target = '_blank';
-          link.rel = 'noopener noreferrer';
-          link.style.display = 'block';
-          link.style.textDecoration = 'none';
-          link.style.color = 'inherit';
-          link.appendChild(card);
-          grid.appendChild(link);
-        } else {
-          grid.appendChild(card);
-        }
-      });
-  }
-
-  function filterWorks(cat, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderWorks(cat);
-  }
-
-  renderWorks('game');
-
-  // ── INTERSECTION OBSERVER for skill bars ──
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if(e.isIntersecting) {
-        e.target.querySelectorAll('.skill-fill').forEach(fill => {
-          const w = fill.style.width;
-          fill.style.width = '0';
-          requestAnimationFrame(() => { fill.style.width = w; });
-        });
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  const aboutSection = document.getElementById('about');
-  if(aboutSection) observer.observe(aboutSection);
-</script>
-</body>
+         <footer class="footer">
+            <p>© 2026 Ninfixe Studio. All Rights Reserved.</p>
+         </footer>
+         
+         <!-- CURSOR -->
+         <div class="custom-cursor"></div>
+         <script src="script.js"></script>
+    </body>
 </html>
