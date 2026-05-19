@@ -218,6 +218,7 @@ body{
 .btn-primary{
     background: darkred;
     box-shadow: 0 0 20px darkred;
+    animation: pulse-blood 3s infinite;
 }
 
 .btn-primary:hover{
@@ -478,27 +479,9 @@ body{
 .project-tags span{
     background: #1a1a1a;
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 14px;
     border: 1px solid rgba(255, 0, 0, 0.3);
-}
-
-/* BUTTON */
-
-.project-content a{
-    display: inline-block;
-    padding: 12px 25px;
-    background: darkred;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.project-content a:hover{
-    background: red;
-
-    box-shadow: 0 0 20px red;
 }
 
 /* UPCOMING */
@@ -528,6 +511,33 @@ body{
 
 .upcoming-content p{
     color: #555;
+}
+
+/* BUTTON PROJECT CARD */
+.btn-view{
+    display: inline-block;
+    padding: 12px 25px;
+    background: darkred;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-view:hover{
+    background: red;
+
+    box-shadow: 0 0 20px red;
+}
+
+.btn-upcoming{
+    display: inline-block;
+    padding: 12px 25px;
+    background: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 /* RESPONSIVE */
