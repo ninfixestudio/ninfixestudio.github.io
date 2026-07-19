@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINFIXE_STUDIO // dev.terminal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    <div class="vignette"></div>
+    <header>
+    <nav>
+        <a href="#top" class="logo">NINFIXESTUDIO<span class="cursor-blink"></span></a>
+        <div class="nav-links" id="navLinks">
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
+        </div>
+        <button class="burger" id="burgerBtn" aria-label="toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+        </button>
+    </nav>
+    </header>
+
+    <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+        <canvas id="matrixCanvas"></canvas>
+        <div class="container hero-inner">
+        <div class="terminal-window" style="max-width:640px;">
+            <div class="terminal-bar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="terminal-title">boot.sh — ninfixe_studio</span>
+            </div>
+            <div class="terminal-body" id="bootBody">
+            <div class="line"><span class="prompt">&gt;</span> initializing studio profile...</div>
+            </div>
+        </div>
+
+        <h1 class="hero-title">Hi, I'm <span class="hl">Haru</span> —<br>founder of <span class="hl">Ninfixe Studio</span></h1>
+        <p class="hero-sub">A solo indie game developer creating story-driven horror experiences. I design, program, and build games that blend immersive gameplay with meaningful storytelling.</p>
+        <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">▶ view projects</a>
+            <a href="#contact" class="btn btn-ghost">✉ let's collaborate</a>
+        </div>
+        </div>
+        <div class="scroll-hint"><span>scroll</span><span class="chev"></span></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+        <div class="about-grid">
+            <div class="about-text reveal">
+            <p class="eyebrow">about</p>
+            <h2 class="section-title">$ cat about_me.txt</h2>
+            <p><strong>Ninfixe Studio</strong> is an independent game studio founded in 2025 with a passion for creating atmospheric horror experiences. Every project is built with the goal of delivering not just scares, but memorable moments that stay with players long after they finish the game.</p>
+            <p>I believe horror is at its best when it tells a meaningful story. Instead of relying on random events or absurd twists, I enjoy crafting narratives that connect with players emotionally, making every character, environment, and decision feel like part of a larger experience.</p>
+            <p>Based in <strong>Lombok, Indonesia</strong>, I continue learning and building new projects with Unity and C#, always striving to create games that leave a lasting impression.</p>
+
+            <div class="stat-row">
+                <div class="stat-card"><div class="stat-num">1+</div><div class="stat-label">years shipping</div></div>
+                <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">projects made</div></div>
+                <div class="stat-card"><div class="stat-num">Unity</div><div class="stat-label">Game Engine</div></div>
+            </div>
+            </div>
+
+            <div class="avatar-window reveal">
+            <div class="avatar-canvas">
+                <!-- <div class="pixel-face">🕹️</div> -->
+                <img src="assets/images/avatar.jpg" alt="Haru's avatar" class="avatar-img">
+            </div>
+            <div class="avatar-caption"><span class="name">haru@ninfixe</span>:~$ whoami</div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+        <p class="eyebrow reveal">projects</p>
+        <h2 class="section-title reveal">$ ls ./projects --status</h2>
+
+        <div class="tabs reveal" role="tablist" aria-label="project status filter">
+            <button class="tab active" data-status="released" role="tab" aria-selected="true">
+            <span class="dot-status"></span> released <span class="tab-count">(1)</span>
+            </button>
+            <button class="tab" data-status="dev" role="tab" aria-selected="false">
+            <span class="dot-status"></span> in development <span class="tab-count">(2)</span>
+            </button>
+            <button class="tab" data-status="soon" role="tab" aria-selected="false">
+            <span class="dot-status"></span> coming soon <span class="tab-count">(1)</span>
+            </button>
+        </div>
+
+        <!-- RELEASED -->
+        <div class="tab-panel active reveal" data-panel="released">
+            <div class="card" data-status="released">
+                <div class="card-art">
+                    <img src="assets/images/projectexe.png" alt="Project Preview">
+                    <span class="status-chip">
+                        <span class="dot-status"></span>released
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Project.exe</div>
+                    <div class="card-desc">Rifan, a print and photocopy shop keeper.</div>
+                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
+                    <div class="card-foot"><span>2026 · Itch.io</span><a href="https://ninfixestudio.itch.io/programexe">view →</a></div>
+                </div>
+            </div>
+            <!--<div class="card" data-status="released">
+                <div class="card-art">
+                    <img src="assets/images/projectexe.png" alt="Project Preview">
+                    <span class="status-chip">
+                        <span class="dot-status"></span>released
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Project.exe</div>
+                    <div class="card-desc">Rifan, a print and photocopy shop keeper.</div>
+                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
+                    <div class="card-foot"><span>2026 · Itch.io</span><a href="#contact">view →</a></div>
+                </div>
+            </div>-->
+        </div>
+        <!-- IN DEVELOPMENT -->
+        <div class="tab-panel" data-panel="dev">
+            <div class="card" data-status="dev">
+                <div class="card-art">
+                    <img src="assets/images/riverbehindus.jpg" alt="Project Preview">
+                    <span class="status-chip">
+                        <span class="dot-status"></span>in dev
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">River Behind Us</div>
+                    <div class="card-desc">Bayu is a child who lives at his grandmother's house.</div>
+                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
+                    <div class="card-progress"><div class="card-progress-fill" data-progress="87"></div></div>
+                    <div class="card-foot"><span>87% complete</span><a href="https://www.youtube.com/@NinfixeStudio">follow →</a></div>
+                </div>
+            </div>
+            <div class="card" data-status="dev">
+                <div class="card-art">
+                    <img src="assets/images/beyondthepaper.jpeg" alt="Project Preview">
+                    <span class="status-chip">
+                        <span class="dot-status"></span>in dev
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Beyond The Paper (STC)</div>
+                    <div class="card-desc">A full story of the part game Program.exe.</div>
+                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
+                    <div class="card-progress"><div class="card-progress-fill" data-progress="67"></div></div>
+                    <div class="card-foot"><span>67% complete</span><a href="https://www.youtube.com/@NinfixeStudio">follow →</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMING SOON -->
+        <div class="tab-panel" data-panel="soon">
+            <div class="card" data-status="soon">
+                <div class="card-art">
+                    <img src="assets/images/projectexe.png" alt="Project Preview">
+                    <span class="status-chip">
+                        <span class="dot-status"></span>soon
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">Jalan Pintas (STC)</div>
+                    <div class="card-desc">Topan, a driver taxi. This game is a anomaly games.</div>
+                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
+                    <div class="card-foot"><span>early concept</span><a href="https://www.youtube.com/@NinfixeStudio">get notified →</a></div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+        <p class="eyebrow reveal">skills</p>
+        <h2 class="section-title reveal">$ cat stats.json</h2>
+
+        <div class="skills-grid">
+            <div class="skill-group reveal">
+            <h3>&gt; programming</h3>
+            <div class="skill-item">
+                <div class="skill-item-head"><span>C# / Unity</span><span>82%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-value="82"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-item-head"><span>Phython</span><span>27%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-value="27"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-item-head"><span>Javascript</span><span>14%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-value="14"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-item-head"><span>C++</span><span>8%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-value="8"></div></div>
+            </div>
+            </div>
+
+            <div class="skill-group reveal">
+            <h3>&gt; art &amp; modeling</h3>
+            <div class="skill-item">
+                <div class="skill-item-head"><span>Pixel Art</span><span>10%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-value="10"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-item-head"><span>Animation</span><span>18%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-value="18"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-item-head"><span>3D Modeling</span><span>45%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-value="45"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-item-head"><span>Story Writing</span><span>72%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-value="72"></div></div>
+            </div>
+            </div>
+        </div>
+
+        <div class="reveal" style="margin-top:36px;">
+            <h3 style="font-family:var(--font-term); font-size:20px; color:var(--amber); margin-bottom:10px; letter-spacing:1px;">&gt; toolbelt</h3>
+            <div class="toolbelt">
+            <span class="chip">Unity</span>
+            <!--<span class="chip">Godot</span>-->
+            <span class="chip">Aseprite</span>
+            <!-- <span class="chip">FL Studio</span> -->
+            <span class="chip">Blender</span>
+            <span class="chip">Git</span>
+            <span class="chip">Figma</span>
+            <span class="chip">Trello</span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+        <p class="eyebrow reveal">contact</p>
+        <h2 class="section-title reveal">$ ./collaborate --with=me</h2>
+
+        <div class="contact-wrap">
+            <div class="contact-info reveal">
+            <p>Whether you're interested in collaborating, discussing a project, or simply sharing ideas about game development, I'd be happy to hear from you. I usually respond within 2–3 business days.</p>
+            <div class="contact-links">
+                <a href="mailto:ninfixestudio@gmail.com"><span class="ico">✉</span> ninfixestudio@gmail.com</a>
+                <a href="#"><span class="ico">🐦</span> @ninfixestudio</a>
+                <a href="https://ninfixestudio.itch.io/"><span class="ico">🎮</span> ninfixestudio.itch.io</a>
+                <a href="#"><span class="ico">💬</span> discord.gg/ninfixe</a>
+            </div>
+            </div>
+
+            <div class="terminal-window reveal">
+            <div class="terminal-bar">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="terminal-title">new_message.sh</span>
+            </div>
+            <form class="terminal-form" id="contactForm">
+                <div class="field">
+                <label for="cf-name">name</label>
+                <input id="cf-name" name="name" type="text" placeholder="jane doe" required>
+                </div>
+                <div class="field">
+                <label for="cf-email">email</label>
+                <input id="cf-email" name="email" type="email" placeholder="jane@studio.com" required>
+                </div>
+                <div class="field">
+                <label for="cf-msg">message</label>
+                <textarea id="cf-msg" name="message" placeholder="I'd love to collaborate on..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">send transmission ▶</button>
+                <div class="form-msg" id="formMsg" aria-live="polite"></div>
+            </form>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer>
+    <div class="container">
+        <div class="footer-grid">
+        <div>
+            <div class="footer-logo">NINFIXE_STUDIO</div>
+            <p class="footer-note">Small studio, unforgettable stories. Building horror games from Lombok, Indonesia since 2025.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#about">about</a>
+            <a href="#projects">projects</a>
+            <a href="#skills">skills</a>
+            <a href="#contact">contact</a>
+        </div>
+        </div>
+        <div class="footer-bottom">
+        <span>© <span id="year"></span> Ninfixe Studio. All rights reserved.</span>
+        <span>built with <span class="heart">♥</span> and way too much coffee</span>
+        </div>
+    </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="back to top">▲</button>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

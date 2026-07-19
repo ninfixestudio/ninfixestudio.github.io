@@ -1,0 +1,16 @@
+:root{
+    --bg:#0a0d12;
+    --bg-alt:#0f141b;
+    --panel:#12181f;
+    --line:#232c36;
+    --amber:#ffb400;
+    --amber-dim:#8a6300;
+    --cyan:#4deeea;
+    --magenta:#ff4d9d;
+    --green:#5dff8f;
+    --text:#d7e1e9;
+    --muted:#6b7a89;
+    --font-pixel:'Press Start 2P', monospace;
+    --font-mono:'JetBrains Mono', monospace;
+    --font-term:'VT323', monospace;
+  }
