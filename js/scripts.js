@@ -17,7 +17,7 @@
   const bootLines = [
     "> initializing studio profile...",
     "> loading founder.json ... OK",
-    "> mounting /projects ... 7 found",
+    "> mounting /projects ... 4 found",
     "> studio: NINFIXE_STUDIO",
     "> status: accepting collaborations ✔"
   ];
