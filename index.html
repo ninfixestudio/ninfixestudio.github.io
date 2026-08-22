@@ -3,324 +3,862 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NINFIXE_STUDIO // dev.terminal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    
+    <!-- SEO -->
+    <title>MyLombok - Explore the Beauty of Lombok Island</title>
+
+    <meta name="description"
+        content="Discover the best destinations, beaches, waterfalls, culture, and travel tips to explore the beauty of Lombok Island.">
+
+    <meta name="author" content="Ninfixe">
+
+    <!-- Open Graph (untuk Facebook, Discord, WhatsApp) -->
+    <meta property="og:title" content="MyLombok - Explore the Beauty of Lombok Island">
+    <meta property="og:description"
+        content="Discover the best destinations, beaches, waterfalls, culture, and travel tips in Lombok.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/preview.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
-    <div class="crt-overlay"></div>
-    <div class="vignette"></div>
-    <header>
-    <nav>
-        <a href="#top" class="logo">NINFIXESTUDIO<span class="cursor-blink"></span></a>
-        <div class="nav-links" id="navLinks">
-        <a href="#about">about</a>
-        <a href="#projects">projects</a>
-        <a href="#skills">skills</a>
-        <a href="#contact">contact</a>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="nav-container container">
+            <a href="#" class="logo">MyLombok</a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#destination">Destinations</a></li>
+                    <li><a href="#things">Things To Do</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="#contact" class="nav-btn">Book Now</a>
         </div>
-        <button class="burger" id="burgerBtn" aria-label="toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-        </button>
-    </nav>
     </header>
 
-    <main id="top">
-
-    <!-- HERO -->
+    <!-- ================= HERO ================= -->
+     
     <section class="hero">
-        <canvas id="matrixCanvas"></canvas>
-        <div class="container hero-inner">
-        <div class="terminal-window" style="max-width:640px;">
-            <div class="terminal-bar">
-            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            <span class="terminal-title">boot.sh — ninfixe_studio</span>
-            </div>
-            <div class="terminal-body" id="bootBody">
-            <div class="line"><span class="prompt">&gt;</span> initializing studio profile...</div>
-            </div>
-        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container reveal">
 
-        <h1 class="hero-title">Hi, I'm <span class="hl">Haru</span> —<br>founder of <span class="hl">Ninfixe Studio</span></h1>
-        <p class="hero-sub">A solo indie game developer creating story-driven horror experiences. I design, program, and build games that blend immersive gameplay with meaningful storytelling.</p>
-        <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">▶ view projects</a>
-            <a href="#contact" class="btn btn-ghost">✉ let's collaborate</a>
-        </div>
-        </div>
-        <div class="scroll-hint"><span>scroll</span><span class="chev"></span></div>
-    </section>
+            <span class="hero-badge">Discover Your Next Adventure</span>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="container">
-        <div class="about-grid">
-            <div class="about-text reveal">
-            <p class="eyebrow">about</p>
-            <h2 class="section-title">$ cat about_me.txt</h2>
-            <p><strong>Ninfixe Studio</strong> is an independent game studio founded in 2025 with a passion for creating atmospheric horror experiences. Every project is built with the goal of delivering not just scares, but memorable moments that stay with players long after they finish the game.</p>
-            <p>I believe horror is at its best when it tells a meaningful story. Instead of relying on random events or absurd twists, I enjoy crafting narratives that connect with players emotionally, making every character, environment, and decision feel like part of a larger experience.</p>
-            <p>Based in <strong>Lombok, Indonesia</strong>, I continue learning and building new projects with Unity and C#, always striving to create games that leave a lasting impression.</p>
+            <h1>Explore the World with MyLombok</h1>
 
-            <div class="stat-row">
-                <div class="stat-card"><div class="stat-num">1+</div><div class="stat-label">years shipping</div></div>
-                <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">projects made</div></div>
-                <div class="stat-card"><div class="stat-num">Unity</div><div class="stat-label">Game Engine</div></div>
-            </div>
+            <p>
+                Your adventure starts here. Discover breathtaking destinations and unforgettable experiences.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#destination" class="btn-primary">Explore Now</a>
+                <a href="#gallery" class="btn-secondary">Watch Video</a>
             </div>
 
-            <div class="avatar-window reveal">
-            <div class="avatar-canvas">
-                <!-- <div class="pixel-face">🕹️</div> -->
-                <img src="assets/images/avatar.jpg" alt="Haru's avatar" class="avatar-img">
-            </div>
-            <div class="avatar-caption"><span class="name">haru@ninfixe</span>:~$ whoami</div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="container">
-        <p class="eyebrow reveal">projects</p>
-        <h2 class="section-title reveal">$ ls ./projects --status</h2>
-
-        <div class="tabs reveal" role="tablist" aria-label="project status filter">
-            <button class="tab active" data-status="released" role="tab" aria-selected="true">
-            <span class="dot-status"></span> released <span class="tab-count">(1)</span>
-            </button>
-            <button class="tab" data-status="dev" role="tab" aria-selected="false">
-            <span class="dot-status"></span> in development <span class="tab-count">(2)</span>
-            </button>
-            <button class="tab" data-status="soon" role="tab" aria-selected="false">
-            <span class="dot-status"></span> coming soon <span class="tab-count">(1)</span>
-            </button>
-        </div>
-
-        <!-- RELEASED -->
-        <div class="tab-panel active reveal" data-panel="released">
-            <div class="card" data-status="released">
-                <div class="card-art">
-                    <img src="assets/images/projectexe.png" alt="Project Preview">
-                    <span class="status-chip">
-                        <span class="dot-status"></span>released
-                    </span>
+            <!--<div class="hero-search">
+                <div class="search-item">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="search-info">
+                        <span class="search-label">Destination</span>
+                        <h4>Lombok, Indonesia</h4>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="card-title">Project.exe</div>
-                    <div class="card-desc">Rifan, a print and photocopy shop keeper.</div>
-                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
-                    <div class="card-foot"><span>2026 · Itch.io</span><a href="https://ninfixestudio.itch.io/programexe">view →</a></div>
+
+                <div class="search-divider"></div>
+
+                <div class="search-item">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                <div class="search-info">
+                    <span class="search-label">Check-in</span>
+                        <h4>25 July 2026</h4>
+                    </div>
                 </div>
-            </div>
-            <!--<div class="card" data-status="released">
-                <div class="card-art">
-                    <img src="assets/images/projectexe.png" alt="Project Preview">
-                    <span class="status-chip">
-                        <span class="dot-status"></span>released
-                    </span>
+
+                <div class="search-divider"></div>
+
+                <div class="search-item">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-user-friends"></i>
+                    </div>
+                    <div class="search-info">
+                        <span class="search-label">Travelers</span>
+                        <h4>2 Person</h4>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="card-title">Project.exe</div>
-                    <div class="card-desc">Rifan, a print and photocopy shop keeper.</div>
-                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
-                    <div class="card-foot"><span>2026 · Itch.io</span><a href="#contact">view →</a></div>
-                </div>
+
+                <button class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                </button>
+
             </div>-->
         </div>
-        <!-- IN DEVELOPMENT -->
-        <div class="tab-panel" data-panel="dev">
-            <div class="card" data-status="dev">
-                <div class="card-art">
-                    <img src="assets/images/riverbehindus.jpg" alt="Project Preview">
-                    <span class="status-chip">
-                        <span class="dot-status"></span>in dev
-                    </span>
-                </div>
-                <div class="card-body">
-                    <div class="card-title">River Behind Us</div>
-                    <div class="card-desc">Bayu is a child who lives at his grandmother's house.</div>
-                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
-                    <div class="card-progress"><div class="card-progress-fill" data-progress="87"></div></div>
-                    <div class="card-foot"><span>87% complete</span><a href="https://www.youtube.com/@NinfixeStudio">follow →</a></div>
-                </div>
-            </div>
-            <div class="card" data-status="dev">
-                <div class="card-art">
-                    <img src="assets/images/beyondthepaper.jpeg" alt="Project Preview">
-                    <span class="status-chip">
-                        <span class="dot-status"></span>in dev
-                    </span>
-                </div>
-                <div class="card-body">
-                    <div class="card-title">Beyond The Paper (STC)</div>
-                    <div class="card-desc">A full story of the part game Program.exe.</div>
-                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
-                    <div class="card-progress"><div class="card-progress-fill" data-progress="67"></div></div>
-                    <div class="card-foot"><span>67% complete</span><a href="https://www.youtube.com/@NinfixeStudio">follow →</a></div>
-                </div>
-            </div>
-        </div>
 
-        <!-- COMING SOON -->
-        <div class="tab-panel" data-panel="soon">
-            <div class="card" data-status="soon">
-                <div class="card-art">
-                    <img src="assets/images/projectexe.png" alt="Project Preview">
-                    <span class="status-chip">
-                        <span class="dot-status"></span>soon
-                    </span>
-                </div>
-                <div class="card-body">
-                    <div class="card-title">Jalan Pintas (STC)</div>
-                    <div class="card-desc">Topan, a driver taxi. This game is a anomaly games.</div>
-                    <div class="card-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Horror</span></div>
-                    <div class="card-foot"><span>early concept</span><a href="https://www.youtube.com/@NinfixeStudio">get notified →</a></div>
-                </div>
-            </div>
-        </div>
+        <a href="#destination" class="scroll-down reveal">
+            <span>SCROLL TO EXPLORE</span>
+        </a>
 
-        </div>
     </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
+        
+    <!-- ================= DESTINATIONS ================= -->
+    <section class="destination section" id="destination">
         <div class="container">
-        <p class="eyebrow reveal">skills</p>
-        <h2 class="section-title reveal">$ cat stats.json</h2>
+            <div class="destination-grid">
 
-        <div class="skills-grid">
-            <div class="skill-group reveal">
-            <h3>&gt; programming</h3>
-            <div class="skill-item">
-                <div class="skill-item-head"><span>C# / Unity</span><span>82%</span></div>
-                <div class="skill-bar"><div class="skill-bar-fill" data-value="82"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-item-head"><span>Phython</span><span>27%</span></div>
-                <div class="skill-bar"><div class="skill-bar-fill" data-value="27"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-item-head"><span>Javascript</span><span>14%</span></div>
-                <div class="skill-bar"><div class="skill-bar-fill" data-value="14"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-item-head"><span>C++</span><span>8%</span></div>
-                <div class="skill-bar"><div class="skill-bar-fill" data-value="8"></div></div>
-            </div>
+                <!-- LEFT -->
+                <div class="destination-content reveal-left">
+
+                    <span class="section-badge">
+                        Explore Lombok
+                    </span>
+
+                    <h2 class="section-title">
+                        Discover The Beauty
+                        <span>Of Lombok</span>
+                    </h2>
+
+                    <p class="section-text">
+                        Discover breathtaking beaches, majestic waterfalls,
+                        rolling green hills, and unforgettable island adventures
+                        across Lombok.
+                    </p>
+
+                    <div class="destination-list">
+
+                        <div class="destination-card">
+                            <img src="assets/images/destinations/pantaipink.jpg" alt="">
+                            <div class="card-info">
+                                <h3>Pantai Pink</h3>
+                                <span>Lombok Timur</span>
+                            </div>
+                        </div>
+
+                        <div class="destination-card">
+                            <img src="assets/images/destinations/sendang.jpg" alt="">
+                            <div class="card-info">
+                                <h3>Sendang Gile</h3>
+                                <span>Lombok Utara</span>
+                            </div>
+                        </div>
+
+                        <div class="destination-card">
+                            <img src="assets/images/destinations/merese.jpg" alt="">
+                            <div class="card-info">
+                                <h3>Bukit Merese</h3>
+                                <span>Lombok Tengah</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+                <div class="destination-map reveal-right">
+
+                    <img src="assets/images/destinations/lombok-island-map.png" alt="Lombok Map">
+
+                    <!-- Pin -->
+                    <div class="map-pin pin-1">
+                        <div class="map-popup">
+                            <img src="assets/images/destinations/rinjani.jpg" alt="">
+
+                            <div class="popup-info">
+                                <h5>Taman Nasional Gunung Rinjani</h5>
+                                <span>Lombok Utara</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-pin pin-2">
+                        <div class="map-popup">
+                            <img src="assets/images/destinations/gili.jpg" alt="">
+
+                            <div class="popup-info">
+                                <h4>Gili Trawangan</h4>
+                                <span>Lombok Utara</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-pin pin-3">
+                        <div class="map-popup">
+                            <img src="assets/images/destinations/kuta.jpg" alt="">
+
+                            <div class="popup-info">
+                                <h4>Kuta Mandalika</h4>
+                                <span>Lombok Tengah</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-pin pin-4">
+                        <div class="map-popup">
+                            <img src="assets/images/destinations/narmada.jpg" alt="">
+
+                            <div class="popup-info">
+                                <h4>Taman Narmada</h4>
+                                <span>Lombok Barat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="skill-group reveal">
-            <h3>&gt; art &amp; modeling</h3>
-            <div class="skill-item">
-                <div class="skill-item-head"><span>Pixel Art</span><span>10%</span></div>
-                <div class="skill-bar"><div class="skill-bar-fill" data-value="10"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-item-head"><span>Animation</span><span>18%</span></div>
-                <div class="skill-bar"><div class="skill-bar-fill" data-value="18"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-item-head"><span>3D Modeling</span><span>45%</span></div>
-                <div class="skill-bar"><div class="skill-bar-fill" data-value="45"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-item-head"><span>Story Writing</span><span>72%</span></div>
-                <div class="skill-bar"><div class="skill-bar-fill" data-value="72"></div></div>
-            </div>
-            </div>
-        </div>
+            <div class="destination-stats reveal">
+                <div class="stat-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>25+</h3>
+                    <p>Amazing Destinations</p>
+                </div>
 
-        <div class="reveal" style="margin-top:36px;">
-            <h3 style="font-family:var(--font-term); font-size:20px; color:var(--amber); margin-bottom:10px; letter-spacing:1px;">&gt; toolbelt</h3>
-            <div class="toolbelt">
-            <span class="chip">Unity</span>
-            <!--<span class="chip">Godot</span>-->
-            <span class="chip">Aseprite</span>
-            <!-- <span class="chip">FL Studio</span> -->
-            <span class="chip">Blender</span>
-            <span class="chip">Git</span>
-            <span class="chip">Figma</span>
-            <span class="chip">Trello</span>
+                <div class="stat-card">
+                    <i class="fa-solid fa-camera"></i>
+                    <h3>300+</h3>
+                    <p>Beautiful Photo Spots</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>15K+</h3>
+                    <p>Happy Visitors</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>100+</h3>
+                    <p>Travel References</p>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
+    <!-- ================= THINGS TO DO ================= -->
+    <section class="things" id="things">
         <div class="container">
-        <p class="eyebrow reveal">contact</p>
-        <h2 class="section-title reveal">$ ./collaborate --with=me</h2>
+            <div class="things-heading reveal">
+                <span class="things-badge">
+                    Things To Do
+                </span>
 
-        <div class="contact-wrap">
-            <div class="contact-info reveal">
-            <p>Whether you're interested in collaborating, discussing a project, or simply sharing ideas about game development, I'd be happy to hear from you. I usually respond within 2–3 business days.</p>
-            <div class="contact-links">
-                <a href="mailto:ninfixestudio@gmail.com"><span class="ico">✉</span> ninfixestudio@gmail.com</a>
-                <a href="#"><span class="ico">🐦</span> @ninfixestudio</a>
-                <a href="https://ninfixestudio.itch.io/"><span class="ico">🎮</span> ninfixestudio.itch.io</a>
-                <a href="#"><span class="ico">💬</span> discord.gg/ninfixe</a>
-            </div>
+                <h2>Discover Unforgettable Experiences</h2>
+                <p>
+                    Explore exciting activities that make every journey memorable,
+                    from relaxing on beautiful beaches to experiencing local culture.
+                </p>
             </div>
 
-            <div class="terminal-window reveal">
-            <div class="terminal-bar">
-                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                <span class="terminal-title">new_message.sh</span>
+            <div class="things-grid reveal">
+                <div class="thing-card reveal">
+                    <div class="thing-icon">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+
+                    <div class="things-image">
+                        <img src="assets/images/things/beach.jpg" alt="">
+                    </div>
+
+                    <h3>Beach</h3>
+
+                    <p>
+                        Relax on white sandy beaches and enjoy crystal-clear water.
+                    </p>
+                </div>
+
+                <div class="thing-card reveal">
+                    <div class="thing-icon">
+                        <i class="fa-solid fa-person-hiking"></i>
+                    </div>
+
+                    <div class="things-image">
+                        <img src="assets/images/things/hiking.jpg" alt="">
+                    </div>
+
+                    <h3>Hiking</h3>
+
+                    <p>
+                        Explore breathtaking mountain trails with stunning views.
+                    </p>
+                </div>
+
+                <div class="thing-card reveal">
+                    <div class="thing-icon">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+
+                    <div class="things-image">
+                        <img src="assets/images/things/photography.jpg" alt="">
+                    </div>
+
+                    <h3>Photography</h3>
+
+                    <p>
+                        Capture unforgettable landscapes and beautiful moments.
+                    </p>
+                </div>
+
+                <div class="thing-card reveal">
+                    <div class="thing-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+
+                    <div class="things-image">
+                        <img src="assets/images/things/food.jpg" alt="">
+                    </div>
+
+                    <h3>Local Food</h3>
+
+                    <p>
+                        Taste authentic cuisine full of local flavors.
+                </div>
+
+                <div class="thing-card reveal">
+                    <div class="thing-icon">
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
+
+                    <div class="things-image">
+                        <img src="assets/images/things/boattour.jpg" alt="">
+                    </div>
+
+                    <h3>Boat Tour</h3>
+
+                    <p>
+                        Sail through islands and discover hidden beaches.
+                </div>
+
+                <div class="thing-card reveal">
+                    <div class="thing-icon">
+                        <i class="fa-solid fa-campground"></i>
+                    </div>
+
+                    <div class="things-image">
+                        <img src="assets/images/things/camping.jpg" alt="">
+                    </div>
+
+                    <h3>Camping</h3>
+
+                    <p>
+                        Spend the night under the stars surrounded by nature.
+                    </p>
+                </div>
             </div>
-            <form class="terminal-form" id="contactForm">
-                <div class="field">
-                <label for="cf-name">name</label>
-                <input id="cf-name" name="name" type="text" placeholder="jane doe" required>
-                </div>
-                <div class="field">
-                <label for="cf-email">email</label>
-                <input id="cf-email" name="email" type="email" placeholder="jane@studio.com" required>
-                </div>
-                <div class="field">
-                <label for="cf-msg">message</label>
-                <textarea id="cf-msg" name="message" placeholder="I'd love to collaborate on..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">send transmission ▶</button>
-                <div class="form-msg" id="formMsg" aria-live="polite"></div>
-            </form>
-            </div>
-        </div>
         </div>
     </section>
 
-    </main>
+    <!-- ================= GALLERY ================= -->
 
-    <footer>
-    <div class="container">
-        <div class="footer-grid">
-        <div>
-            <div class="footer-logo">NINFIXE_STUDIO</div>
-            <p class="footer-note">Small studio, unforgettable stories. Building horror games from Lombok, Indonesia since 2025.</p>
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-badge">
+                    Gallery
+                </span>
+
+                <h2>
+                    Moments That Stay Forever
+                </h2>
+
+                <p>
+                    Explore the natural beauty, exciting activities, and unforgettable
+                    experiences waiting for you in every corner of paradise.
+                </p>
+            </div>
+            <!-- GALLERY GRID -->
+            <div class="gallery-grid reveal">
+                <!-- Image 1 -->
+                <div class="gallery-item tall">
+                    <img src="assets/images/gallery/gallery01.jpg" alt="Tanjung Aan Beach">
+
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Tanjung Aan Beach</h3>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                
+                                Central Lombok
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/gallery02.jpg" alt="Gili Nanggu">
+
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Gili Nanggu</h3>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                
+                                West Lombok
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/gallery03.jpg" alt="Snorkeling">
+
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Snorkeling</h3>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                
+                                Gili Island
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/gallery04.jpg" alt="Sunset Beach">
+
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Sunset View</h3>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                
+                                Selong Belanak
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/gallery05.jpg" alt="Sendang Gile">
+
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Sendang Gile Waterfall</h3>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                
+                                North Lombok
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="gallery-item wide">
+                    <img src="assets/images/gallery/gallery06.jpg" alt="Mountain">
+
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Mountain Adventure</h3>
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                
+                                Mount Rinjani
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-button">
+                <a href="#" class="btn btn-primary">
+                    <i class="fa-regular fa-image"></i>
+
+                    Explore More Moments
+                </a>
+            </div>
         </div>
-        <div class="footer-links">
-            <a href="#about">about</a>
-            <a href="#projects">projects</a>
-            <a href="#skills">skills</a>
-            <a href="#contact">contact</a>
+    </section>
+
+    <!-- ================= REVIEWS ================= -->
+
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-title reveal">
+                <span class="section-badge">
+                    Visitor Reviews
+                </span>
+
+                <h2> 
+                    Loved by Travelers <br>
+                    From Around the World
+                </h2>
+
+                <p>
+                    Discover what visitors say after exploring the beauty,
+                    culture, and unforgettable experiences of Lombok.
+                </p>
+            </div>
+
+            <div class="rating-summary reveal">
+                <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="rating-score">
+                    <h3>4.8<span>/5</span></h3>
+
+                    <p>Based on 1,248+ Happy Visitors</p>
+                </div>
+            </div>
+            
+            <div class="reviews-marquee reveal">
+                <div class="reviews-track">
+
+                    <!-- CARD 1 -->
+
+                    <article class="review-card">
+                        <div class="review-stars">
+                            ★★★★★
+                        </div>
+
+                        <p class="review-text">
+                            "The beaches were stunning and the sunsets were
+                            absolutely unforgettable. I can't wait to visit again."
+                        </p>
+
+                        <div class="review-user">
+                            <img src="assets/images/reviews/user.jpg" alt="Emily">
+
+                            <div>
+                                <h4>Emily Center</h4>
+
+                                <span>Travel Photographer</span>
+
+                                <small>
+                                    🇦🇺 Australia
+                                </small>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CARD 2 -->
+
+                    <article class="review-card">
+                        <div class="review-stars">
+                            ★★★★★
+                        </div>
+
+                        <p class="review-text">
+                            "One of the most peaceful places I've ever explored.
+                            The locals were incredibly welcoming."
+                        </p>
+
+                        <div class="review-user">
+                            <img src="assets/images/reviews/user.jpg" alt="Haruto">
+
+                            <div>
+                                <h4>Haruto Sato</h4>
+
+                                <span>Adventure Enthusiast</span>
+
+                                <small>
+                                    🇯🇵 Japan
+                                </small>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- CARD 3 -->
+
+                    <article class="review-card">
+                        <div class="review-stars">
+                            ★★★★★
+                        </div>
+
+                        <p class="review-text">
+                            "Crystal-clear water, delicious local food,
+                            and amazing scenery everywhere."
+                        </p>
+
+                        <div class="review-user">
+                            <img src="assets/images/reviews/user.jpg" alt="Michael">
+
+                            <div>
+
+                                <h4>Michael Chen</h4>
+
+                                <span>Digital Nomad</span>
+
+                                <small>
+                                    🇸🇬 Singapore
+                                </small>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CARD 4 -->
+
+                    <article class="review-card">
+                        <div class="review-stars">
+                            ★★★★★
+                        </div>
+
+                        <p class="review-text">
+
+                            "Perfect destination for families and photographers.
+                            Every corner is picture perfect."
+
+                        </p>
+
+                        <div class="review-user">
+                            <img src="assets/images/reviews/user.jpg" alt="Lucas">
+
+                            <div>
+                                <h4>Lucas Pereira</h4>
+
+                                <span>Backpacker</span>
+
+                                <small>
+                                    🇧🇷 Brazil
+                                </small>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CARD 5 -->
+
+                    <article class="review-card">
+                        <div class="review-stars">
+                            ★★★★★
+                        </div>
+
+                        <p class="review-text">
+                            "A hidden paradise filled with culture,
+                            breathtaking mountains and beautiful beaches."
+                        </p>
+
+                        <div class="review-user">
+                            <img src="assets/images/reviews/user.jpg" alt="Sophie">
+
+                            <div>
+                                <h4>Sophie Martin</h4>
+
+                                <span>Content Creator</span>
+
+                                <small>
+                                    🇫🇷 France
+                                </small>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CARD 6 -->
+
+                    <article class="review-card">
+                        <div class="review-stars">
+                            ★★★★★
+                        </div>
+
+                        <p class="review-text">
+                            "The entire journey exceeded my expectations.
+                            Definitely one of my favorite destinations."
+                        </p>
+
+                        <div class="review-user">
+                            <img src="assets/images/reviews/user.jpg" alt="Kevin">
+
+                            <div>
+                                <h4>Kevin Wilson</h4>
+
+                                <span>Travel Blogger</span>
+
+                                <small>
+                                    🇺🇸 United States
+                                </small>
+
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+        <div class="contact-overlay"></div>
+        <div class="container">
+            <div class="contact-card reveal">
+                <div class="contact-content">
+                    <span class="section-badge">
+                        PLAN YOUR JOURNEY
+                    </span>
+
+                    <h2>
+                        Ready for Your
+                        <span>Next Adventure?</span>
+                    </h2>
+
+                    <p>
+                        Let us help you create unforgettable memories.
+                        Whether you're looking for tropical beaches,
+                        mountain escapes, or cultural experiences,
+                        our travel experts are ready to plan your
+                        perfect journey.
+                    </p>
+
+                    <div class="contact-buttons">
+                        <a href="#" class="btn-primary">
+                            Book Your Trip
+                        </a>
+
+                        <a href="#" class="btn-secondary">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-bottom">
-        <span>© <span id="year"></span> Ninfixe Studio. All rights reserved.</span>
-        <span>built with <span class="heart">♥</span> and way too much coffee</span>
+        <svg class="contact-wave"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none">
+
+            <path
+                d="M0,64L80,74.7C160,85,320,107,480,106.7C640,107,800,85,960,74.7C1120,64,1280,64,1360,64L1440,64L1440,120L0,120Z">
+            </path>
+
+        </svg>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-content reveal">
+                <div class="footer-column">
+                    <a href="#" class="footer-logo">
+                        MyLombok
+                    </a>
+
+                    <p>
+                        Explore breathtaking destinations and create unforgettable journeys with MyLombok.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    
+                        <a href="https://x.com/" aria-label="X (Twitter)">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    
+                        <a href="https://www.youtube.com/" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h3>Explore</h3>
+
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#destination">Destinations</a></li>
+                        <li><a href="#things">Things To Do</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Company</h3>
+
+                    <ul>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-column">
+                    <h3>Contact</h3>
+
+                    <ul>
+                        <li>Lombok, Indonesia</li>
+                        <li>+62 812-3456-7890</li>
+                        <li>hello@mylombok.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Penutup Footer -->
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p class="reveal-left">
+                    © <span id="year"></span> MyLombok. All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links reveal-right">
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
+
     </footer>
 
-    <button class="to-top" id="toTop" aria-label="back to top">▲</button>
+    <!-- ================= SCROLL UP ================= -->
 
-    <script src="js/scripts.js"></script>
+    <button class="scroll-top" id="scrollTop" aria-label="back to top">▲</button>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/animation.js"></script>
 </body>
 </html>
