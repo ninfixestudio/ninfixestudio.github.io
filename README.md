@@ -52,7 +52,10 @@
 <!-- Replace REPO_NAME below with your actual game repository name -->
 <p align="center">
   <a href="https://github.com/NinfixeStudio/ninfixestudio.github.io">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=NinfixeStudio&repo=ninfixestudio.github.io&theme=radical&hide_border=true" />
+    <img
+      src="https://github-readme-stats-fast.vercel.app/api/pin/?username=NinfixeStudio&repo=ninfixestudio.github.io&theme=radical&hide_border=true"
+      alt="NinfixeStudio Portfolio"
+    />
   </a>
 </p>
 
