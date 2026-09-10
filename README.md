@@ -47,17 +47,37 @@
 
 ---
 
-### 🎮 Featured Project
+### 🚀 Featured Projects
 
-<!-- Replace REPO_NAME below with your actual game repository name -->
-<p align="center">
-  <a href="https://github.com/NinfixeStudio/ninfixestudio.github.io">
-    <img
-      src="https://github-readme-stats-fast.vercel.app/api/pin/?username=NinfixeStudio&repo=ninfixestudio.github.io&theme=radical&hide_border=true"
-      alt="NinfixeStudio Portfolio"
-    />
-  </a>
-</p>
+<table>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/NinfixeStudio/ninfixestudio.github.io">
+        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=NinfixeStudio&repo=ninfixestudio.github.io&theme=radical&hide_border=true">
+      </a>
+    </td>
+
+    <td width="50%">
+      <a href="https://github.com/NinfixeStudio/PROJECT-2">
+        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=NinfixeStudio&repo=PROJECT-2&theme=radical&hide_border=true">
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/NinfixeStudio/PROJECT-3">
+        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=NinfixeStudio&repo=PROJECT-3&theme=radical&hide_border=true">
+      </a>
+    </td>
+
+    <td width="50%">
+      <a href="https://github.com/NinfixeStudio/PROJECT-4">
+        <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=NinfixeStudio&repo=PROJECT-4&theme=radical&hide_border=true">
+      </a>
+    </td>
+  </tr>
+</table>
 ---
 
 ### 🌐 Connect with Me
