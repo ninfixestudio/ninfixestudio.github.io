@@ -51,7 +51,7 @@
 
 <!-- Replace REPO_NAME below with your actual game repository name -->
 <p align="center">
-  <a href="https://github.com/NinfixeStudio/REPO_NAME">
+  <a href="https://github.com/ninfixestudio/ninfixestudio.github.io">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=NinfixeStudio&repo=REPO_NAME&theme=radical&hide_border=true" />
   </a>
 </p>
