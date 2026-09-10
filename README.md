@@ -50,7 +50,7 @@
 ### 🎮 Featured Project
 
 <!-- Replace REPO_NAME below with your actual game repository name -->
-<p align="center">
+<p align="left">
   <a href="https://github.com/NinfixeStudio/ninfixestudio.github.io">
     <img
       src="https://github-readme-stats-fast.vercel.app/api/pin/?username=NinfixeStudio&repo=ninfixestudio.github.io&theme=radical&hide_border=true"
@@ -58,7 +58,7 @@
     />
   </a>
 </p>
-<p align="center">
+<p align="right">
   <a href="https://github.com/NinfixeStudio/ninfixestudio.github.io">
     <img
       src="https://github-readme-stats-fast.vercel.app/api/pin/?username=NinfixeStudio&repo=ninfixestudio.github.io&theme=radical&hide_border=true"
